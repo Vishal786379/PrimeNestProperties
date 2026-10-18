@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Find your perfect home with PrimeNest Properties. Explore apartments, villas, and family homes.">
+    <title>PrimeNest Properties | Find Your Place</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top pn-navbar">
+        <div class="container">
+            <a class="navbar-brand pn-brand" href="#home">
+                <span class="brand-icon"><i class="bi bi-houses-fill"></i></span>
+                <span>PrimeNest<small>PROPERTIES</small></span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#properties">Properties</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item">
+                        <a class="btn btn-pn ms-lg-2" href="#contact">List Your Property <i
+                                class="bi bi-arrow-up-right"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6 hero-content">
+                        <span class="eyebrow"><i class="bi bi-stars"></i> YOUR NEXT CHAPTER STARTS HERE</span>
+                        <h1>Find a place<br>to call <span>home.</span></h1>
+                        <p class="hero-text">
+                            From your first apartment to your forever home, discover spaces
+                            that fit your life, style, and future.
+                        </p>
+                        <div class="hero-buttons d-flex flex-wrap gap-3">
+                            <a href="#properties" class="btn btn-pn btn-lg">Explore Properties <i
+                                    class="bi bi-arrow-right"></i></a>
+                            <a href="#about" class="btn btn-outline-pn btn-lg">Why PrimeNest?</a>
+                        </div>
+
+                        <div class="hero-stats row g-3">
+                            <div class="col-4">
+                                <strong>500+</strong>
+                                <span>Properties</span>
+                            </div>
+                            <div class="col-4">
+                                <strong>350+</strong>
+                                <span>Happy clients</span>
+                            </div>
+                            <div class="col-4">
+                                <strong>10+</strong>
+                                <span>Years of trust</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="hero-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85"
+                                class="hero-image" alt="Beautiful contemporary home with landscaped front garden">
+                            <div class="hero-floating-card">
+                                <span class="floating-icon"><i class="bi bi-house-heart-fill"></i></span>
+                                <div>
+                                    <strong>Your dream home awaits</strong>
+                                    <small>Let's find your perfect match</small>
+                                </div>
+                            </div>
+                            <span class="hero-decoration" aria-hidden="true"><i class="bi bi-stars"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search -->
+        <section class="search-section" aria-label="Search properties">
+            <div class="container">
+                <form class="search-panel" id="propertySearchForm">
+                    <div class="search-heading">
+                        <span class="search-heading-icon"><i class="bi bi-search"></i></span>
+                        <div>
+                            <h2>Find your property</h2>
+                            <p>Search homes that suit you.</p>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 align-items-end">
+                        <div class="col-md-6 col-lg-3">
+                            <label class="form-label" for="searchLocation">Location</label>
+                            <div class="input-icon">
+                                <i class="bi bi-geo-alt"></i>
+                                <input class="form-control" id="searchLocation" type="search" placeholder="e.g. Mumbai">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <label class="form-label" for="searchType">Property type</label>
+                            <select class="form-select" id="searchType">
+                                <option value="">All property types</option>
+                                <option value="apartment">Apartment</option>
+                                <option value="villa">Villa</option>
+                                <option value="house">House</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <label class="form-label" for="searchBudget">Maximum budget</label>
+                            <select class="form-select" id="searchBudget">
+                                <option value="">Any budget</option>
+                                <option value="5000000">Up to ₹50 lakh</option>
+                                <option value="10000000">Up to ₹1 crore</option>
+                                <option value="20000000">Up to ₹2 crore</option>
+                                <option value="50000000">Up to ₹5 crore</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <button type="submit" class="btn btn-pn search-button w-100">
+                                <i class="bi bi-search"></i> Search Homes
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Properties -->
+        <section class="section-padding properties-section" id="properties">
+            <div class="container">
+                <div class="section-heading d-flex flex-wrap align-items-end justify-content-between gap-3">
+                    <div>
+                        <span class="eyebrow">HANDPICKED FOR YOU</span>
+                        <h2>Featured <span>properties.</span></h2>
+                        <p>Explore spaces that could be your next home.</p>
+                    </div>
+                    <div class="sort-wrap">
+                        <label for="sortProperties" class="form-label">Sort by</label>
+                        <select class="form-select" id="sortProperties">
+                            <option value="featured">Featured</option>
+                            <option value="low">Price: Low to high</option>
+                            <option value="high">Price: High to low</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="filter-chips d-flex flex-wrap gap-2 mb-4" aria-label="Quick property filters">
+                    <button type="button" class="filter-chip active" data-type="all">All homes</button>
+                    <button type="button" class="filter-chip" data-type="apartment">Apartments</button>
+                    <button type="button" class="filter-chip" data-type="villa">Villas</button>
+                    <button type="button" class="filter-chip" data-type="house">Family homes</button>
+                </div>
+
+                <div id="searchMessage" class="search-message" aria-live="polite"></div>
+
+                <div class="row g-4" id="propertyGrid">
+                    <!-- Property 1 -->
+                    <div class="col-md-6 col-lg-4 property-item" data-type="apartment" data-location="bandra mumbai"
+                        data-price="18500000" data-featured="1">
+                        <article class="property-card h-100">
+                            <div class="property-image-wrap">
+                                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85"
+                                    alt="Premium modern apartment with stylish architecture" loading="lazy">
+                                <span class="property-badge">Featured</span>
+                                <button class="favorite-btn" type="button" aria-label="Save Skyline Residency"
+                                    aria-pressed="false"><i class="bi bi-heart"></i></button>
+                            </div>
+                            <div class="property-body">
+                                <div class="property-price">₹1.85 Cr <span>For sale</span></div>
+                                <h3>Skyline Residency</h3>
+                                <p class="property-location"><i class="bi bi-geo-alt-fill"></i> Bandra, Mumbai</p>
+                                <div class="property-features">
+                                    <span><i class="bi bi-door-open"></i> 3 Beds</span>
+                                    <span><i class="bi bi-droplet"></i> 2 Baths</span>
+                                    <span><i class="bi bi-aspect-ratio"></i> 1,450 sq.ft.</span>
+                                </div>
+                                <button class="btn btn-property w-100 inquiry-button" type="button"
+                                    data-property="Skyline Residency">Enquire Now <i
+                                        class="bi bi-arrow-up-right"></i></button>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Property 2 -->
+                    <div class="col-md-6 col-lg-4 property-item" data-type="villa" data-location="lonavala pune"
+                        data-price="24500000" data-featured="2">
+                        <article class="property-card h-100">
+                            <div class="property-image-wrap">
+                                <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=900&q=85"
+                                    alt="Luxury villa surrounded by greenery with private pool" loading="lazy">
+                                <span class="property-badge badge-gold">Premium</span>
+                                <button class="favorite-btn" type="button" aria-label="Save Greenview Villa"
+                                    aria-pressed="false"><i class="bi bi-heart"></i></button>
+                            </div>
+                            <div class="property-body">
+                                <div class="property-price">₹2.45 Cr <span>For sale</span></div>
+                                <h3>Greenview Villa</h3>
+                                <p class="property-location"><i class="bi bi-geo-alt-fill"></i> Lonavala, Pune</p>
+                                <div class="property-features">
+                                    <span><i class="bi bi-door-open"></i> 4 Beds</span>
+                                    <span><i class="bi bi-droplet"></i> 3 Baths</span>
+                                    <span><i class="bi bi-aspect-ratio"></i> 2,600 sq.ft.</span>
+                                </div>
+                                <button class="btn btn-property w-100 inquiry-button" type="button"
+                                    data-property="Greenview Villa">Enquire Now <i
+                                        class="bi bi-arrow-up-right"></i></button>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Property 3 -->
+                    <div class="col-md-6 col-lg-4 property-item" data-type="house" data-location="thane mumbai"
+                        data-price="9200000" data-featured="3">
+                        <article class="property-card h-100">
+                            <div class="property-image-wrap">
+                                <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=900&q=85"
+                                    alt="Contemporary family home with inviting front entrance" loading="lazy">
+                                <span class="property-badge">Family favourite</span>
+                                <button class="favorite-btn" type="button" aria-label="Save Maple Family Home"
+                                    aria-pressed="false"><i class="bi bi-heart"></i></button>
+                            </div>
+                            <div class="property-body">
+                                <div class="property-price">₹92 Lakh <span>For sale</span></div>
+                                <h3>Maple Family Home</h3>
+                                <p class="property-location"><i class="bi bi-geo-alt-fill"></i> Thane, Mumbai</p>
+                                <div class="property-features">
+                                    <span><i class="bi bi-door-open"></i> 2 Beds</span>
+                                    <span><i class="bi bi-droplet"></i> 2 Baths</span>
+                                    <span><i class="bi bi-aspect-ratio"></i> 1,100 sq.ft.</span>
+                                </div>
+                                <button class="btn btn-property w-100 inquiry-button" type="button"
+                                    data-property="Maple Family Home">Enquire Now <i
+                                        class="bi bi-arrow-up-right"></i></button>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Property 4 -->
+                    <div class="col-md-6 col-lg-4 property-item" data-type="apartment"
+                        data-location="airoli navi mumbai" data-price="7800000" data-featured="4">
+                        <article class="property-card h-100">
+                            <div class="property-image-wrap">
+                                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85"
+                                    alt="Bright contemporary apartment interior with natural light" loading="lazy">
+                                <span class="property-badge">New listing</span>
+                                <button class="favorite-btn" type="button" aria-label="Save Urban Nest Apartment"
+                                    aria-pressed="false"><i class="bi bi-heart"></i></button>
+                            </div>
+                            <div class="property-body">
+                                <div class="property-price">₹78 Lakh <span>For sale</span></div>
+                                <h3>Urban Nest Apartment</h3>
+                                <p class="property-location"><i class="bi bi-geo-alt-fill"></i> Airoli, Navi Mumbai</p>
+                                <div class="property-features">
+                                    <span><i class="bi bi-door-open"></i> 2 Beds</span>
+                                    <span><i class="bi bi-droplet"></i> 2 Baths</span>
+                                    <span><i class="bi bi-aspect-ratio"></i> 950 sq.ft.</span>
+                                </div>
+                                <button class="btn btn-property w-100 inquiry-button" type="button"
+                                    data-property="Urban Nest Apartment">Enquire Now <i
+                                        class="bi bi-arrow-up-right"></i></button>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Property 5 -->
+                    <div class="col-md-6 col-lg-4 property-item" data-type="villa" data-location="alibaug raigad"
+                        data-price="42000000" data-featured="5">
+                        <article class="property-card h-100">
+                            <div class="property-image-wrap">
+                                <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85"
+                                    alt="Elegant luxury villa with spacious landscaped grounds" loading="lazy">
+                                <span class="property-badge badge-gold">Luxury</span>
+                                <button class="favorite-btn" type="button" aria-label="Save Palm Haven Estate"
+                                    aria-pressed="false"><i class="bi bi-heart"></i></button>
+                            </div>
+                            <div class="property-body">
+                                <div class="property-price">₹4.20 Cr <span>For sale</span></div>
+                                <h3>Palm Haven Estate</h3>
+                                <p class="property-location"><i class="bi bi-geo-alt-fill"></i> Alibaug, Raigad</p>
+                                <div class="property-features">
+                                    <span><i class="bi bi-door-open"></i> 5 Beds</span>
+                                    <span><i class="bi bi-droplet"></i> 4 Baths</span>
+                                    <span><i class="bi bi-aspect-ratio"></i> 3,800 sq.ft.</span>
+                                </div>
+                                <button class="btn btn-property w-100 inquiry-button" type="button"
+                                    data-property="Palm Haven Estate">Enquire Now <i
+                                        class="bi bi-arrow-up-right"></i></button>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Property 6 -->
+                    <div class="col-md-6 col-lg-4 property-item" data-type="house" data-location="kharghar navi mumbai"
+                        data-price="12500000" data-featured="6">
+                        <article class="property-card h-100">
+                            <div class="property-image-wrap">
+                                <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=900&q=85"
+                                    alt="Modern family house with minimalist exterior and garden" loading="lazy">
+                                <span class="property-badge">Great location</span>
+                                <button class="favorite-btn" type="button" aria-label="Save Cedar Court Home"
+                                    aria-pressed="false"><i class="bi bi-heart"></i></button>
+                            </div>
+                            <div class="property-body">
+                                <div class="property-price">₹1.25 Cr <span>For sale</span></div>
+                                <h3>Cedar Court Home</h3>
+                                <p class="property-location"><i class="bi bi-geo-alt-fill"></i> Kharghar, Navi Mumbai
+                                </p>
+                                <div class="property-features">
+                                    <span><i class="bi bi-door-open"></i> 3 Beds</span>
+                                    <span><i class="bi bi-droplet"></i> 2 Baths</span>
+                                    <span><i class="bi bi-aspect-ratio"></i> 1,600 sq.ft.</span>
+                                </div>
+                                <button class="btn btn-property w-100 inquiry-button" type="button"
+                                    data-property="Cedar Court Home">Enquire Now <i
+                                        class="bi bi-arrow-up-right"></i></button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div id="noProperties" class="no-results d-none">
+                    <i class="bi bi-house-exclamation"></i>
+                    <h3>No matching properties found</h3>
+                    <p>Try changing your location, property type, or budget.</p>
+                    <button type="button" id="resetSearch" class="btn btn-outline-pn">Clear filters</button>
+                </div>
+
+                <p class="demo-note"><i class="bi bi-info-circle"></i> Property names, availability and prices are
+                    sample demonstration content.</p>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="about-section section-padding" id="about">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="about-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1100&q=85"
+                                alt="Elegant home interior with comfortable living space" loading="lazy">
+                            <div class="about-experience"><strong>10+</strong><span>Years helping<br>people find
+                                    home</span></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 about-copy">
+                        <span class="eyebrow">MORE THAN REAL ESTATE</span>
+                        <h2>We help you find<br>your <span>happy place.</span></h2>
+                        <p>Finding a property is about more than square feet and floor plans. It's about the life you
+                            want to build there.</p>
+                        <p>PrimeNest Properties makes your property journey easier with clear information, personalised
+                            guidance, and a people-first approach.</p>
+                        <div class="about-points">
+                            <div><i class="bi bi-check-circle-fill"></i><span><strong>Personalised
+                                        guidance</strong><small>Options tailored to your needs and
+                                        budget.</small></span></div>
+                            <div><i class="bi bi-check-circle-fill"></i><span><strong>Clear
+                                        communication</strong><small>Understand the details before making
+                                        decisions.</small></span></div>
+                            <div><i class="bi bi-check-circle-fill"></i><span><strong>Support at every
+                                        step</strong><small>From your first search to your next move.</small></span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn btn-pn mt-4">Talk to our team <i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-card">
+                    <div>
+                        <span class="eyebrow">YOUR NEXT CHAPTER</span>
+                        <h2>Ready to find your<br><span>place in the world?</span></h2>
+                        <p>Tell us what you're looking for. We'll help you explore your options.</p>
+                    </div>
+                    <a href="#contact" class="btn btn-gold btn-lg">Let's get started <i
+                            class="bi bi-arrow-up-right"></i></a>
+                    <div class="cta-decoration" aria-hidden="true"><i class="bi bi-house-heart"></i></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Inquiry form -->
+        <section class="contact-section section-padding" id="contact">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-5 contact-copy">
+                        <span class="eyebrow">LET'S TALK PROPERTY</span>
+                        <h2>Tell us what<br>you're <span>looking for.</span></h2>
+                        <p>Share a few details and the property you're interested in. Our demo inquiry form will
+                            validate your information and show a confirmation.</p>
+                        <div class="contact-info">
+                            <div class="contact-info-icon"><i class="bi bi-chat-dots"></i></div>
+                            <div><strong>Personalised assistance</strong><span>Tell us your preferences and
+                                    budget.</span></div>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-info-icon"><i class="bi bi-shield-check"></i></div>
+                            <div><strong>Clear next steps</strong><span>We make your property search easier to
+                                    navigate.</span></div>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-info-icon"><i class="bi bi-clock"></i></div>
+                            <div><strong>Convenient enquiry</strong><span>Send your details in just a few
+                                    minutes.</span></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div class="inquiry-card">
+                            <div class="inquiry-heading">
+                                <div><span class="eyebrow">PROPERTY INQUIRY</span>
+                                    <h3>Let's find your next home.</h3>
+                                </div>
+                                <span class="inquiry-icon"><i class="bi bi-envelope-paper"></i></span>
+                            </div>
+                            <div id="inquiryAlert" aria-live="polite"></div>
+
+                            <form id="inquiryForm" novalidate>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="fullName" class="form-label">Full name <span>*</span></label>
+                                        <input type="text" class="form-control" id="fullName" name="name"
+                                            placeholder="Your full name" minlength="2" maxlength="60"
+                                            autocomplete="name" required>
+                                        <div class="invalid-feedback"></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Email address <span>*</span></label>
+                                        <input type="email" class="form-control" id="email" name="email"
+                                            placeholder="you@example.com" maxlength="100" autocomplete="email" required>
+                                        <div class="invalid-feedback"></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="phone" class="form-label">Mobile number <span>*</span></label>
+                                        <input type="tel" class="form-control" id="phone" name="phone"
+                                            placeholder="10-digit mobile number" inputmode="numeric" maxlength="10"
+                                            pattern="[6-9][0-9]{9}" autocomplete="tel" required>
+                                        <div class="invalid-feedback"></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="interestedProperty" class="form-label">Interested property
+                                            <span>*</span></label>
+                                        <select class="form-select" id="interestedProperty" name="property" required>
+                                            <option value="">Choose a property</option>
+                                            <option>Skyline Residency</option>
+                                            <option>Greenview Villa</option>
+                                            <option>Maple Family Home</option>
+                                            <option>Urban Nest Apartment</option>
+                                            <option>Palm Haven Estate</option>
+                                            <option>Cedar Court Home</option>
+                                            <option>I'm open to suggestions</option>
+                                        </select>
+                                        <div class="invalid-feedback"></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="budget" class="form-label">Your budget <span>*</span></label>
+                                        <select class="form-select" id="budget" name="budget" required>
+                                            <option value="">Select your budget</option>
+                                            <option>Below ₹50 lakh</option>
+                                            <option>₹50 lakh – ₹1 crore</option>
+                                            <option>₹1 crore – ₹2 crore</option>
+                                            <option>₹2 crore – ₹5 crore</option>
+                                            <option>Above ₹5 crore</option>
+                                        </select>
+                                        <div class="invalid-feedback"></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="purpose" class="form-label">Purpose <span>*</span></label>
+                                        <select class="form-select" id="purpose" name="purpose" required>
+                                            <option value="">Select purpose</option>
+                                            <option>Buying a home</option>
+                                            <option>Investment</option>
+                                            <option>Renting</option>
+                                            <option>Selling a property</option>
+                                        </select>
+                                        <div class="invalid-feedback"></div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="message" class="form-label">Additional details
+                                            <span>*</span></label>
+                                        <textarea class="form-control" id="message" name="message" rows="4"
+                                            placeholder="Tell us about your preferred location, size, or requirements (10–1000 characters)"
+                                            minlength="10" maxlength="1000" required></textarea>
+                                        <div class="invalid-feedback"></div>
+                                        <div class="form-text text-end"><span id="messageCount">0</span>/1000 characters
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="consent" name="consent"
+                                                required>
+                                            <label class="form-check-label" for="consent">
+                                                I confirm the details are correct and agree to be contacted about this
+                                                inquiry. <span>*</span>
+                                            </label>
+                                            <div class="invalid-feedback">Please confirm your details before submitting.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-pn btn-lg w-100">
+                                            Submit Inquiry <i class="bi bi-arrow-right"></i>
+                                        </button>
+                                        <p class="form-disclaimer"><i class="bi bi-info-circle"></i> Demo only — your
+                                            details are not sent or stored.</p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="pn-footer">
+        <div class="container">
+            <div class="row gy-4 align-items-center">
+                <div class="col-lg-5">
+                    <a class="navbar-brand pn-brand footer-brand" href="#home">
+                        <span class="brand-icon"><i class="bi bi-houses-fill"></i></span>
+                        <span>PrimeNest<small>PROPERTIES</small></span>
+                    </a>
+                    <p class="footer-tagline">Helping you find a place to belong.</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-links">
+                        <a href="#home">Home</a>
+                        <a href="#properties">Properties</a>
+                        <a href="#about">About</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-social">
+                        <a href="#contact" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#contact" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#contact" aria-label="Email"><i class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-bottom">
+                <span>© <span class="current-year"></span> PrimeNest Properties. All rights reserved.</span>
+                <span>Designed to help you feel at home.</span>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
